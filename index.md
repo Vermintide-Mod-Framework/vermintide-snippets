@@ -4,9 +4,9 @@ layout: default
 
 ## Vermintide Snippets
 
-{% for post in site.posts %}
+{% for snip in site.snippets %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a href="{{ snip.url | relative_url }}">{{ snip.title }}</a>
+    <span class="postDate">{{ snip.date | date: "%-d %b %Y" }}</span>
   </li>
 {% endfor %}
