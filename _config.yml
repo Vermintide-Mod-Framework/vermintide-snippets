@@ -4,10 +4,11 @@ collections:
   snippets:
     output: true
     layout: default
-defaults:
-  -
-    scope:
-      path: "_snippets"
-      type: "snippets"
-    values:
-      layout: "default"
+    permalink: /:title/
+#defaults:
+#  -
+#    scope:
+#      path: "_snippets"
+#      type: "snippets"
+#    values:
+#      layout: "default"
