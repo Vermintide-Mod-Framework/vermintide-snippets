@@ -3,7 +3,7 @@ title: Warps to a specific Fortune of War wave
 requested_by: j_sat
 ---
 
-``lua
+```lua
 local WANTED_WAVE = 1
 
 -- Needed to avoid a crash. Removes an assert that would fail otherwise.
