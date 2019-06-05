@@ -1,12 +1,16 @@
 title: Vermintide Snippets
+author: Modders
+
 theme: minima
+
 collections:
   snippets:
     output: true
     permalink: /:title/
+
 defaults:
   -
     scope:
       type: "snippets"
     values:
-      layout: "default"
+      layout: "page"
