@@ -1,4 +1,5 @@
 theme: jekyll-theme-time-machine
 collections:
   snippets:
+    output: true
     layout: default
