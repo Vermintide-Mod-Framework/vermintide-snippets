@@ -1,3 +1,7 @@
+---
+title: Discount Deathwish
+---
+
 ```lua
 local DAMAGE_DEALT_MULTIPLIER = 2/3 -- Reduce damage taken by enemies by 33%
 local DAMAGE_RECV_MULTIPLIER = 1.5 -- Increase damage taken by players by 33%
