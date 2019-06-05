@@ -1,13 +1,12 @@
 title: Vermintide Snippets
+theme: minima
 collections:
   snippets:
     output: true
-    layout: default
     permalink: /:title/
-#defaults:
-#  -
-#    scope:
-#      path: "_snippets"
-#      type: "snippets"
-#    values:
-#      layout: "default"
+defaults:
+  -
+    scope:
+      type: "snippets"
+    values:
+      layout: "default"
