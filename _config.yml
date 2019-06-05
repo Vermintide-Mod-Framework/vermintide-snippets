@@ -1,5 +1,4 @@
 title: Vermintide Snippets
-theme: jekyll-theme-time-machine
 collections:
   snippets:
     output: true
