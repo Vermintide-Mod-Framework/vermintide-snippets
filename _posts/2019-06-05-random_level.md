@@ -1,10 +1,9 @@
 ---
 title: Start a random unlocked level
-layout: default
+requested_by: Legitimate
 ---
 
 ```lua
--- Start a random unlocked level, requested by Legitimate.
 local mmm = Managers.matchmaking
 local level_keys = mmm:_get_unlocked_levels_by_party()
 local level_key, preferred_levels = mmm:_get_level_key_from_level_weights(level_keys)
