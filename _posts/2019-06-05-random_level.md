@@ -1,6 +1,7 @@
 ---
 title: Start a random unlocked level
 requested_by: Legitimate
+layout: default
 ---
 
 ```lua
