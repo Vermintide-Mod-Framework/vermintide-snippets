@@ -1,7 +1,13 @@
 title: Vermintide Snippets
-author: Modders
+author: Zaphio
+description: >
+  A collection of Vermintide snippets. To run them,
+  you'll need a mod to execute Lua in-game, such as VermKit.
 
 theme: minima
+header_pages:
+  - README.md
+  - LICENCE.md
 
 collections:
   snippets:
