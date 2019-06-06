@@ -1,4 +1,6 @@
-# Index
+---
+title: Index
+---
 
 {% for snip in site.snippets %}
   <li>
