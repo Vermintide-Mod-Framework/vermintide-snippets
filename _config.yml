@@ -11,9 +11,18 @@ header_pages:
   - LICENCE.md
   
 markdown: kramdown
+highlighter: rouge
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    line_numbers: true
+    css_class: 'highlight'
+    default_lang: lua
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 collections:
   snippets:
