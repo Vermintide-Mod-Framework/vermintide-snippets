@@ -3,11 +3,19 @@ author: https://discord.gg/GAQMw4W
 description: >
   A collection of Vermintide snippets. To run them,
   you'll need a mod to execute Lua in-game, such as VermKit.
+  (Read the About page for more information.)
 
 theme: minima
 header_pages:
   - README.md
   - LICENCE.md
+  
+markdown: kramdown
+kramdown:
+  highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+    line_numbers: true
 
 collections:
   snippets:
