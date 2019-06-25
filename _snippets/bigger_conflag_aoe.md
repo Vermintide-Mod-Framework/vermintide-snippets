@@ -1,6 +1,7 @@
 ---
-title: Bigger conflagration staff AoE
+title: Bigger Conflagration Staff AoE
 requested_by: Bioshift
+---
 
 ```lua
 local AOE_SIZE_MULTIPLIER = 1.5
