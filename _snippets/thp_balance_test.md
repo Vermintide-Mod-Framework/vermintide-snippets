@@ -1,6 +1,5 @@
 ---
 title: THP balance test
-requested_by: dieaready
 ---
 
 ```lua
