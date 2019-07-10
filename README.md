@@ -10,7 +10,7 @@ Snippets made on-demand have the name(s) of the requester(s).
 ## How to use the snippets
 To run a snippet in-game, you'll need a mod that allows executing Lua in-game:
 
-+ [Execute Lua Ingame](https://steamcommunity.com/sharedfiles/filedetails/?id=1705479264) by prop joe.
++ [Execute Lua Ingame](https://steamcommunity.com/sharedfiles/filedetails/?id=1705479264) by prop joe, also includes UI that allows you to choose snippets from a dropdown.
 + [Execute External Lua File](https://steamcommunity.com/sharedfiles/filedetails/?id=1401150396) by prop joe.
 + [VermKit](https://steamcommunity.com/sharedfiles/filedetails/?id=1709998063)
 
@@ -20,6 +20,8 @@ If you're interested in making your own mods, head over to the [VMF documentatio
 ## Customizing the snippets
 Some scripts have customization options. Look for `UPPERCASE_VARIABLES` at the top of the snippet that you can tweak.
 
+## Exporting snippets to Lua
+Run `make_lua_snippets.zsh` to create *snippets.json* and populate the *lua_snippets* directory with snippets as pure Lua.
 
 ## Licence
 The snippets are licensed under permissive Unlicense licence. See the [licence](./LICENCE.md) file for the full text.
