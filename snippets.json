@@ -1,0 +1,114 @@
+[
+{
+  "title": "Make all units visible",
+  "filename": "all_units_visible"
+},
+{
+  "title": "Set field-of-view",
+  "filename": "any_fov"
+},
+{
+  "title": "Any FPS limit",
+  "filename": "any_fps_limit"
+},
+{
+  "title": "Bigger Conflagration Staff AoE",
+  "filename": "bigger_conflag_aoe"
+},
+{
+  "title": "Add a DoT to the bolt staff sparks",
+  "filename": "bolt_staff_dot"
+},
+{
+  "title": "Give allies a buff (VT1 only)",
+  "filename": "buff_allies"
+},
+{
+  "title": "Set the player's movespeed",
+  "filename": "change_movement"
+},
+{
+  "title": "Cheat Mode",
+  "filename": "cheats"
+},
+{
+  "title": "Destroy all enemies",
+  "filename": "destroy_all_enemies"
+},
+{
+  "title": "Discount Deathwish",
+  "filename": "discount_deathwish"
+},
+{
+  "title": "Warps to a specific Fortune of War wave",
+  "filename": "fow_wave_warp"
+},
+{
+  "title": "Hammertime!",
+  "filename": "hammertime"
+},
+{
+  "title": "Set characters to max level",
+  "filename": "max_level"
+},
+{
+  "title": "No intoxication effect",
+  "filename": "no_intoxication_effect"
+},
+{
+  "title": "Hide the \"Waiting for Rescue\" text",
+  "filename": "no_rescue_text"
+},
+{
+  "title": "No ultimate cooldown",
+  "filename": "no_ult_cd"
+},
+{
+  "title": "Play a sound",
+  "filename": "play_sound"
+},
+{
+  "title": "Thicc Sienna (set a model's scale)",
+  "filename": "set_model_scale"
+},
+{
+  "title": "Set game timescale",
+  "filename": "set_timescale"
+},
+{
+  "title": "Improved shield dodges",
+  "filename": "shield_mobility"
+},
+{
+  "title": "Spawn breed",
+  "filename": "spawn_breed"
+},
+{
+  "title": "Spawn a pickup",
+  "filename": "spawn_pickup"
+},
+{
+  "title": "Start a random unlocked level",
+  "filename": "start_random_level"
+},
+{
+  "title": "THP balance test",
+  "filename": "thp_balance_test"
+},
+{
+  "title": "Heal-over-time while in combat",
+  "filename": "thp_combat"
+},
+{
+  "title": "Toggle boss walls",
+  "filename": "toggle_boss_walls"
+},
+{
+  "title": "Unset all talents",
+  "filename": "unset_talents"
+},
+{
+  "title": "Win/fail/reload level",
+  "filename": "win_fail_level"
+}
+]
