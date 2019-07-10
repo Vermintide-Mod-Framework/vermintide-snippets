@@ -68,6 +68,10 @@
   "filename": "play_sound"
 },
 {
+  "title": "Scale first person weapons, useful for shields",
+  "filename": "scale_first_person_weapons"
+},
+{
   "title": "Thicc Sienna (set a model's scale)",
   "filename": "set_model_scale"
 },

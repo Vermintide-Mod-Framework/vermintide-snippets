@@ -1,0 +1,26 @@
+local LEFT_HAND_WEAPON_SCALE = 0.5 -- Default: 1
+local RIGHT_HAND_WEAPON_SCALE = 0.5 -- Default: 1
+
+mod:pcall(function()
+	local unit = Managers.player:local_player().player_unit
+	local inventory_extension = ScriptUnit.extension(unit, "inventory_system")
+	local slot_name = inventory_extension:get_wielded_slot_name()
+	local slot_data = inventory_extension:get_slot_data(slot_name)
+	
+	local lh_scale = Vector3(
+		LEFT_HAND_WEAPON_SCALE,
+		LEFT_HAND_WEAPON_SCALE,
+		LEFT_HAND_WEAPON_SCALE)
+	
+	local rh_scale = Vector3(
+		RIGHT_HAND_WEAPON_SCALE,
+		RIGHT_HAND_WEAPON_SCALE,
+		RIGHT_HAND_WEAPON_SCALE)
+	
+	if slot_data.right_unit_1p then
+		Unit.set_local_scale(slot_data.right_unit_1p, 1, rh_scale)
+	end
+	if slot_data.left_unit_1p then
+		Unit.set_local_scale(slot_data.left_unit_1p, 1, lh_scale)
+	end
+end)
