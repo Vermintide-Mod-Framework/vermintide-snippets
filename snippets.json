@@ -48,6 +48,10 @@
   "filename": "hammertime"
 },
 {
+  "title": "Hide first person weapons or hands",
+  "filename": "hide_first_person_weapons_or_hands"
+},
+{
   "title": "Set characters to max level",
   "filename": "max_level"
 },
