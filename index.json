@@ -1,0 +1,12 @@
+---
+# Preface block so it gets processed.
+---
+
+[
+{% for snippet in site.snippets %}
+	{
+		"title": "{{ snippet.title }}",
+		"filename": "{{ snippet.url | relative_url }}",
+	}
+{% endfor %}
+]
