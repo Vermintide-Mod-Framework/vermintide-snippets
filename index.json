@@ -7,6 +7,6 @@
 	{
 		"title": "{{ snippet.title }}",
 		"filename": "{{ snippet.url | relative_url }}",
-	}
+	},
 {% endfor %}
 ]
