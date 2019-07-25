@@ -1,5 +1,5 @@
 ---
-title: Purple Potion Mania
+title: Potion Mania
 ---
 
 ```lua
@@ -7,6 +7,7 @@ local function UNIT_SELECTOR(unit)
     local blackboard = BLACKBOARDS[unit]
     local breed = blackboard and blackboard.breed
     if breed and breed.boss then return "units/weapons/player/pup_potion_01/pup_potion_strenght_01"
+    elseif breed and breed.special then return "units/weapons/player/pup_potion_01/pup_potion_speed_01"
     else return "units/weapons/player/pup_potion_01/pup_potion_extra_01"
     end
 end
