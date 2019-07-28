@@ -2,6 +2,4 @@
 layout: page
 ---
 
-```lua
-{{ content }}
-```
+<div class="highlight highlight-source-lua"><pre>{{ content }}</pre></div>

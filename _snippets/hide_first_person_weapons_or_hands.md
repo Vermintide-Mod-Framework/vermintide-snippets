@@ -3,7 +3,6 @@ title: Hide first person weapons or hands
 ---
 
 
-```lua
 local HIDE_FIRST_PERSON_WEAPONS = false
 local HIDE_FIRST_PERSON_HANDS = true
 
@@ -21,4 +20,3 @@ mod:pcall(function()
 	-- hide/unhide hands
 	Unit.set_unit_visibility(first_person_extension.first_person_attachment_unit, not HIDE_FIRST_PERSON_HANDS)
 end)
-```

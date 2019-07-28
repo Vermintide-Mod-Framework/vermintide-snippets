@@ -2,7 +2,6 @@
 title: Unset all talents
 ---
 
-```lua
 -- Uncomment the block that does what you want.
 
 local no_talents = {0, 0, 0, 0, 0}
@@ -14,4 +13,3 @@ local talents = Managers.backend:get_interface("talents")
 
 --[[ For ALL careers: ]]
 --for career in pairs(CareerSettings) do talents:set_talents(career, no_talents) end
-```

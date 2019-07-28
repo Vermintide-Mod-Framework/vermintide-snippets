@@ -3,7 +3,6 @@ title: Hammertime!
 requested_by: dieaready
 ---
 
-```lua
 local MULTIPLIER = 10
 
 for _, settings in pairs(Breeds) do
@@ -13,4 +12,3 @@ for _, settings in pairs(Breeds) do
         settings.scale_death_push = MULTIPLIER * base_push
     end
 end
-```

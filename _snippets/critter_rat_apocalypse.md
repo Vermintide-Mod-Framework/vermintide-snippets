@@ -1,5 +1,5 @@
 ---
-title: A critter_rat Tale: Innocence
+title: "A critter_rat Tale: Innocence"
 layout: snippet
 ---
 

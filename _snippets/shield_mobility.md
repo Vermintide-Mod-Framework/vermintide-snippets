@@ -3,7 +3,6 @@ title: Improved shield dodges
 requested_by: Fattigkussen
 ---
 
-```lua
 local DODGE_COUNT               = 2 -- Default: 1
 local MULTIPLIER_DODGE_DISTANCE = 1 -- Default: 0.85
 local MULTIPLIER_DODGE_SPEED    = 1 -- Default: 0.85
@@ -21,4 +20,3 @@ for _, template_name in ipairs{
         change_dodge_speed    = { external_optional_multiplier = MULTIPLIER_DODGE_SPEED },
     }
 end
-```

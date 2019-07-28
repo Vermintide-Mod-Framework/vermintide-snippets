@@ -2,7 +2,6 @@
 title: Set the player's movespeed
 ---
 
-```lua
 local WANTED_SPEED = 8 -- default is 4
 
 PlayerUnitMovementSettings.move_speed = WANTED_SPEED
@@ -12,4 +11,3 @@ if not units_player_movement_setting then return end
 for _, settings in pairs(units_player_movement_setting) do
     settings.move_speed = WANTED_SPEED
 end
-```

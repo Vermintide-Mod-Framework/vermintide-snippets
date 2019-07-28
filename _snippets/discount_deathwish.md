@@ -2,7 +2,6 @@
 title: Discount Deathwish
 ---
 
-```lua
 local DAMAGE_DEALT_MULTIPLIER = 2/3 -- Reduce damage taken by enemies by 33%
 local DAMAGE_RECV_MULTIPLIER = 1.5 -- Increase damage taken by players by 33%
 
@@ -16,4 +15,3 @@ mod:hook(DamageUtils, "add_damage_network", function(func, attacked_unit, attack
     end
     return func(attacked_unit, attacker_unit, damage_amount, ...)
 end)
-```

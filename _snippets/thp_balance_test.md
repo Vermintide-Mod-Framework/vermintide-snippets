@@ -2,7 +2,6 @@
 title: THP balance test
 ---
 
-```lua
 
 -- Tweak the following parameter.
 -- If it's greater than 1 ==> Damage to THP is increased.
@@ -120,4 +119,3 @@ mod:hook_origin(PlayerUnitHealthExtension, "add_damage", function (self, attacke
         end
     end
 end)
-```

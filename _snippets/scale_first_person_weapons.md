@@ -3,7 +3,6 @@ title: Scale first person weapons, useful for shields
 ---
 
 
-```lua
 local LEFT_HAND_WEAPON_SCALE = 0.5 -- Default: 1
 local RIGHT_HAND_WEAPON_SCALE = 0.5 -- Default: 1
 
@@ -30,4 +29,3 @@ mod:pcall(function()
 		Unit.set_local_scale(slot_data.left_unit_1p, 1, lh_scale)
 	end
 end)
-```

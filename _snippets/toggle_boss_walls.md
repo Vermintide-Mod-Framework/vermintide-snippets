@@ -3,7 +3,6 @@ title: Toggle boss walls
 requested_by: NeZCheese
 ---
 
-```lua
 local WANTED_STATE = "lua_open" -- can also be: lua_close
 local BOSS_WALL_FX = "lua_closed_stormfiend" -- can also be: lua_closed_troll
 
@@ -17,4 +16,3 @@ if boss_door_units then
         Unit.flow_event(door_unit, BOSS_WALL_FX)
     end
 end
-```

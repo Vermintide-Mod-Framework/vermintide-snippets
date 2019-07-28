@@ -2,7 +2,6 @@
 title: Spawn a pickup
 ---
 
-```lua
 local PICKUP_NAME = "healing_draught"
 
 local pickup_settings = rawget(AllPickups, PICKUP_NAME)
@@ -28,4 +27,3 @@ local extension_init_data = {
     },
 }
 Managers.state.unit_spawner:spawn_network_unit(pickup_settings.unit_name, "pickup_unit", extension_init_data, position, rotation)
-```

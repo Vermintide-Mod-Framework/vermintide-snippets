@@ -2,7 +2,6 @@
 title: Set game timescale
 ---
 
-```lua
 local WANTED_TIMESCALE_PERCENT = 200 -- twice the normal speed
 
 local time_scale_list = Managers.state.debug.time_scale_list
@@ -12,4 +11,3 @@ for i=1, #time_scale_list do
         return Managers.state.debug:set_time_scale(i)
     end
 end
-```

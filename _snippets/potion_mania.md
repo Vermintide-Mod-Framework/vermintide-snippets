@@ -2,7 +2,6 @@
 title: Potion Mania
 ---
 
-```lua
 local SCALE = 10/3
 local LIFT_CURSE_ON_DEATH = true
 local ATTACHMENT_NODE = "j_spine"
@@ -52,4 +51,3 @@ mod:hook_safe(ConflictDirector, "register_unit_killed", remove)
 mod:hook(PickupSystem, "_spawn_pickup", function(func, self, pickup_settings, pickup_name, ...)
     return func(self, AllPickups.cooldown_reduction_potion, "cooldown_reduction_potion", ...)
 end)
-```

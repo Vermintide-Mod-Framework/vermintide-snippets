@@ -3,7 +3,6 @@ title: Warps to a specific Fortune of War wave
 requested_by: j_sat
 ---
 
-```lua
 local WANTED_WAVE = 1
 
 -- Needed to avoid a crash. Removes an assert that would fail otherwise.
@@ -23,4 +22,3 @@ end
 local conflict_manager = Managers.state.conflict
 mod:pcall(conflict_manager.start_terror_event, conflict_manager, "plaza_wave_" .. num)
 mod:echo("Started wave %i (Fortunes of War)", num)
-```

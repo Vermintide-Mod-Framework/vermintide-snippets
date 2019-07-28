@@ -3,7 +3,6 @@ title: Add a DoT to the bolt staff sparks
 requested_by: level3rat
 ---
 
-```lua
 DamageProfileTemplates
     .fire_spark
     .default_target
@@ -15,4 +14,3 @@ DamageProfileTemplates
         -- "burning_1W_dot_unchained_push"
         -- "burning_1W_dot"
         -- "burning_3W_dot"
-```

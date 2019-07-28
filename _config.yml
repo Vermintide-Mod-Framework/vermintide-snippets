@@ -9,14 +9,14 @@ theme: minima
 header_pages:
   - README.md
   - LICENCE.md
-  
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: 'highlight'
+    css_class: "highlight"
     default_lang: lua
 #    span:
 #      line_numbers: false
@@ -27,11 +27,19 @@ kramdown:
 collections:
   snippets:
     output: true
-    permalink: /:title/
+    permalink: /:title
+  snippets_lua:
+    output: true
+    permalink: /:title.lua
 
 defaults:
   -
     scope:
       type: "snippets"
     values:
-      layout: "page"
+      layout: "snippet"
+  -
+    scope:
+      type: "snippets_lua"
+    values:
+      layout: "snippet_lua"

@@ -2,7 +2,6 @@
 title: Give allies a buff (VT1 only)
 ---
 
-```lua
 local buff_template = "speed_boost_potion"
 
 local buff_template_name_id = NetworkLookup.buff_templates[buff_template]
@@ -39,4 +38,3 @@ for i = 1, #player_and_bot_units, 1 do
         end
     end
 end
-```

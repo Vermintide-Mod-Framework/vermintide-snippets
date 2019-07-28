@@ -4,7 +4,6 @@ requested_by: Bioshift
 ---
 
 
-```lua
 local HEAL_AMOUNT        = 1 -- MUST be multiple of .25
 local TIME_BETWEEN_HEALS = 1
 local BUFF_DURATION      = 2
@@ -70,4 +69,3 @@ local custom_localizations = {
 mod:hook("Localize", function(func, text_id)
     return custom_localizations[text_id] or func(text_id)
 end)
-```
