@@ -27,10 +27,10 @@ kramdown:
 collections:
   snippets:
     output: true
-    permalink: /:title
+    permalink: /:title/
   snippets_lua:
     output: true
-    permalink: /:title.lua
+    permalink: /:title/lua/
 
 defaults:
   -
