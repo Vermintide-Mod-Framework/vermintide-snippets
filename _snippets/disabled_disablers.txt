@@ -1,0 +1,27 @@
+---
+title: Limit disabler duration
+requested_by: LordGiggles
+---
+
+local DISABLE_DURATION = 3 -- For how many seconds will a disabler hold a player.
+
+-- Leech.
+BreedActions.chaos_corruptor_sorcerer.grab_attack.disable_player_time = DISABLE_DURATION
+
+-- Assassin.
+mod:hook_safe(BTTargetPouncedAction, "enter", function(self, unit, bb, t)
+    bb.disable_player_timer = t + DISABLE_DURATION
+end)
+mod:hook(BTTargetPouncedAction, "run", function(func, self, unit, bb, t, dt)
+    local result = func(self, unit, bb, t, dt)
+    if t > bb.disable_player_timer then return "failed" else return result end
+end)
+
+-- Packmaster.
+mod:hook_safe(BTPackMasterDragAction, "enter", function(self, unit, bb, t)
+    bb.disable_player_timer = t + DISABLE_DURATION
+end)
+mod:hook(BTPackMasterDragAction, "run", function(func, self, unit, bb, t, dt)
+    local result = func(self, unit, bb, t, dt)
+    if t > bb.disable_player_timer then return "failed" else return result end
+end)
