@@ -6,7 +6,8 @@
 {% for snip in site.snippets_lua %}
 	{
 		"title": {{ snip.title | jsonify }},
-		"filename": "{{ snip.url | relative_url }}"
+		"name": "{{ snip.name }}",
+		"uri": "{{ snip.url | relative_url }}"
 	}{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
