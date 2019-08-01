@@ -27,10 +27,8 @@ kramdown:
 collections:
   snippets:
     output: true
-    permalink: /:title/
   snippets_lua:
     output: true
-    permalink: /:title.lua
 
 defaults:
   -
@@ -38,8 +36,10 @@ defaults:
       path: "_snippets"
     values:
       layout: "snippet"
+      permalink: /:title.html
   -
     scope:
       path: "_snippets_lua"
     values:
       layout: "snippet_lua"
+      permalink: /:title.lua
