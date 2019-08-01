@@ -4,7 +4,7 @@
 [
 {% for snippet in site.snippets %}
 	{
-		"title": "{{ snippet.title | jsonify }}",
+		"title": {{ snippet.title | jsonify }},
 		"filename": "{{ snippet.url | relative_url }}"
 	}{% unless forloop.last %},{% endunless %}
 {% endfor %}

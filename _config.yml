@@ -30,16 +30,16 @@ collections:
     permalink: /:title/
   snippets_lua:
     output: true
-    permalink: /:title/lua/
+    permalink: /:title.lua
 
 defaults:
   -
     scope:
-      type: "snippets"
+      path: "_snippets"
     values:
       layout: "snippet"
   -
     scope:
-      type: "snippets_lua"
+      path: "_snippets_lua"
     values:
       layout: "snippet_lua"
