@@ -1,5 +1,5 @@
 ---
-title: Index of all Snippets
+title: Index of All Snippets
 ---
 
 {% for snip in site.snippets %}
