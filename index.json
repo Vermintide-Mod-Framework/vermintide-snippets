@@ -1,11 +1,12 @@
 ---
-# Do not delete this header. Jekyll needs it so the template is processed.
+# Needs a front matter.
 ---
+
 [
-{% for snippet in site.snippets %}
+{% for snip in site.snippets_lua %}
 	{
-		"title": {{ snippet.title | jsonify }},
-		"filename": "{{ snippet.url | relative_url }}"
+		"title": {{ snip.title | jsonify }},
+		"filename": "{{ snip.url | relative_url }}"
 	}{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
