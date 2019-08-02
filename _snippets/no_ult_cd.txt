@@ -2,4 +2,6 @@
 title: No ultimate cooldown
 ---
 
-mod:hook_origin(CareerExtension, "start_activated_ability_cooldown", function() end)
+mod:hook(CareerExtension, "start_activated_ability_cooldown", function(func, self, refund_percent)
+    return(func, self, 1)
+end)
