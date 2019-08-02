@@ -1,7 +1,20 @@
 ---
-title: No ultimate cooldown
+title: Set ultimate to infinite or disabled
+requested_by: Exan
 ---
 
+local ULT_MODE = "infinite" -- Valid values: "infinite", "disabled" or "normal"
+
 mod:hook(CareerExtension, "start_activated_ability_cooldown", function(func, self, refund_percent)
-    return(func, self, 1)
+    if ULT_MODE == "infinite" then refund_percent = 1
+    elseif ULT_MODE == "disabled" then refund_percent= 0
+    end
+    func(self, refund_percent)
+    if ULT_MODE == "disabled" then
+	    self:set_activated_ability_cooldown_paused()
+    end
 end)
+
+local player_unit = Managers.player:local_player().player_unit
+local career_extension = ScriptUnit.extension(player_unit, "career_system")
+career_extension:start_activated_ability_cooldown()
