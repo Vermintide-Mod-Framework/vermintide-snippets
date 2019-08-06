@@ -1,0 +1,8 @@
+---
+title: Override Map Factions
+requested_by: EatThePath
+---
+
+local WANTED_FACTION = "beastmen" -- other valid options include "skaven" and "chaos"
+
+script_data.override_conflict_settings = WANTED_FACTION
