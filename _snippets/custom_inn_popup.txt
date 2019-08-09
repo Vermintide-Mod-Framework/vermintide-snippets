@@ -1,0 +1,23 @@
+---
+title: Custom Inn Notification
+---
+
+local index = #NewsFeedTemplates + 1
+for i=1, #NewsFeedTemplates do
+    if NewsFeedTemplates[i].name == "new_vmf_mod" then
+        index = i
+        break
+    end
+end
+
+NewsFeedTemplates[index] = {
+    name = "new_vmf_mod",
+    title = "vmf.news_feed_new_vmf_mod_title",
+    description = "vmf.news_feed_new_vmf_mod_description",
+    duration = 5,
+    cooldown = -1,
+    infinite = true,
+    condition_func = function (params)
+        return true -- @TODO
+    end,
+}
