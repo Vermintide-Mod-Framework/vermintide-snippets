@@ -1,0 +1,23 @@
+---
+title: Select Cata 2/3 in adventure maps
+requested_by: Citrus
+---
+
+DefaultDifficulties = {
+    "normal",
+    "hard",
+    "harder",
+    "hardest",
+    "cataclysm",
+    "cataclysm_2",
+    "cataclysm_3",
+}
+DifficultyMapping = {
+    normal = "recruit",
+    hard = "veteran",
+    harder = "champion",
+    hardest = "legend",
+    cataclysm = "cataclysm",
+    cataclysm_2 = "cataclysm_2",
+    cataclysm_3 = "cataclysm_3",
+}
