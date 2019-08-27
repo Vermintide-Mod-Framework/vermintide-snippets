@@ -1,0 +1,9 @@
+---
+title: Disable quest boons (VT1)
+---
+
+local function const(v) return function() return v end end
+mod:hook_origin(PlayerBoonHandler, "get_active_boons", const({}))
+mod:hook_origin(PlayerBoonHandler, "get_num_boons", const(0))
+mod:hook_origin(PlayerBoonHandler, "has_boon", const(false))
+mod:hook_origin(PlayerBoonHandler, "has_any_boon", const(false))
