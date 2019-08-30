@@ -1,0 +1,6 @@
+---
+title: Disable ragdolls
+---
+
+RagdollSettings.min_num_ragdolls = 0
+RagdollSettings.max_num_ragdolls = 0
