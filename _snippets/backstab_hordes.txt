@@ -1,0 +1,13 @@
+---
+title: Enable backstab soundcue in hordes
+---
+
+mod:hook(BTAttackAction, "enter", function(func, self, unit, blackboard, t)
+    local target_unit = blackboard.target_unit
+    local slot_extension = ScriptUnit.has_extension(target_unit, "ai_slot_system")
+    if not slot_extension then return func(self, unit, blackboard, t) end
+    local num_occupied_slots = slot_extension.num_occupied_slots
+    slot_extension.num_occupied_slots = 1
+    func(self, unit, blackboard, t)
+    slot_extension.num_occupied_slots = num_occupied_slots
+end)
