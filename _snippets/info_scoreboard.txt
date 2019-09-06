@@ -1,0 +1,20 @@
+---
+title: Add more info to the scoreboard
+---
+
+local insert = table.insert
+local sort_function = function(a, b) return b.score < a.score end
+local function add_kill_stat(breed_name)
+    local name = "kills_"..breed_name
+    insert(ScoreboardHelper.scoreboard_topic_stats, {
+        name = name,
+        display_text = name,
+        stat_types = {
+            { "kills_per_breed", breed },
+        },
+        sort_function = sort_function,
+    })
+    insert(ScoreboardHelper.scoreboard_grouped_topic_stats[1].stats, name)
+end
+
+add_kill_stat "skaven_storm_vermin"
