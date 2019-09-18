@@ -1,0 +1,20 @@
+---
+title: Bots only block (and dodge)
+requested_by: piptwo2
+---
+
+mod:hook_origin(PlayerBotInput, "_update_actions", function(self)
+    local input = self._input
+
+    if not self._defend_held then
+        self._defend_held = true
+        input.action_two = true
+        input.action_two_hold = true
+    end
+
+    if self._dodge then
+        input.dodge = true
+        input.dodge_hold = true
+        self._dodge = false
+    end
+end)
