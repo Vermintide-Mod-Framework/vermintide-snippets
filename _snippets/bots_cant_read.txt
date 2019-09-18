@@ -1,0 +1,19 @@
+---
+title: Bots drop grims
+requested_by: Citrus
+---
+
+mod:hook_origin(BTConditions, "should_drop_grimoire", function(blackboard)
+    local inventory_extension = blackboard.inventory_extension
+    local slot_name = "slot_potion"
+    local slot_data = inventory_extension:get_slot_data(slot_name)
+    if slot_data then
+        local item_template = inventory_extension:get_item_template(slot_data)
+        if item_template.is_grimoire then
+            local player = Managers.player:owner(blackboard.unit)
+            Managers.chat:send_chat_message(1, player:local_player_id(), "i cant read lol")
+            return true
+        end
+    end
+    return false
+end)
