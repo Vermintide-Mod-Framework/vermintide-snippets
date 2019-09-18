@@ -6,11 +6,8 @@ requested_by: piptwo2
 mod:hook_origin(PlayerBotInput, "_update_actions", function(self)
     local input = self._input
 
-    if not self._defend_held then
-        self._defend_held = true
-        input.action_two = true
-        input.action_two_hold = true
-    end
+    input.action_two = not input.action_two
+    input.action_two_hold = not input.action_two_hold
 
     if self._dodge then
         input.dodge = true
