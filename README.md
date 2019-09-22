@@ -20,9 +20,6 @@ If you're interested in making your own mods, head over to the [VMF documentatio
 ## Customizing the snippets
 Some scripts have customization options. Look for `UPPERCASE_VARIABLES` at the top of the snippet that you can tweak.
 
-## Exporting snippets to Lua
-Run `make_lua_snippets.zsh` to create *snippets.json* and populate the *lua_snippets* directory with snippets as pure Lua.
-
 ## Licence
 The snippets are licensed under permissive Unlicense licence. See the [licence](./LICENCE.md) file for the full text.
 This site is not affiliated with Games Workshop or Fatshark. The Vermintide name and all other trademarks belong to their respective owners.
