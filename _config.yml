@@ -5,18 +5,13 @@ description: >
   you'll need a mod to execute Lua in-game, such as VermKit.
   (Read the About page for more information.)
 
-theme: minima
-header_pages:
-  - README.md
-  - LICENCE.md
-
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: "highlight"
+    css_class: highlight
     default_lang: lua
 #    span:
 #      line_numbers: false
@@ -27,19 +22,11 @@ kramdown:
 collections:
   snippets:
     output: true
-  snippets_lua:
-    output: true
 
 defaults:
   -
     scope:
-      path: "_snippets"
+      path: _snippets
     values:
-      layout: "snippet"
-      permalink: /:title.html
-  -
-    scope:
-      path: "_snippets_lua"
-    values:
-      layout: "snippet_lua"
+      layout: default
       permalink: /:title.lua

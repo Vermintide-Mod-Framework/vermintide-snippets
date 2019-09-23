@@ -1,0 +1,29 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Vermintide Snippets</title>
+</head>
+<body>
+  <h1>Vermintide Snippets</h1>
+  <input id="search-box" type="text" placeholder="Search..." autofocus>
+  <ul>
+  {% for snip in site.snippets %}
+  <li class="snippet-index">
+    <a class="open-snippet" href="{{ snip.url | relative_url }}">
+      <span class="info-group">
+        <span class="title">{{ snip.title }}</span>
+        <span class="filename">{{ snip.url }}</span>
+      </span>
+      {% if snip.requested_by %}<span class="requester">{{ snip.requested_by }}</span>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
