@@ -1,16 +1,16 @@
 ---
-title: Custom Difficulty Names
+title: Custom localizations
 requested_by: Jet
 ---
 
 local CUSTOM_DIFFICULTY_NAMES = {
-    difficulty_normal      = "Beginner", -- Recruit
-    difficulty_hard        = "Standard", -- Veteran
-    difficulty_harder      = "Proud", -- Champion
-    difficulty_hardest     = "Critical", -- Legend
+    difficulty_normal      = "Easy", -- Recruit
+    difficulty_hard        = "Normal", -- Veteran
+    difficulty_harder      = "Hard", -- Champion
+    difficulty_hardest     = "Nightmare", -- Legend
     --difficulty_cataclysm   = "",
-		--difficulty_cataclysm_3 = "", -- (Weave only)
-		--difficulty_cataclysm_2 = "", -- (Weave only)
+    --difficulty_cataclysm_3 = "", -- (Weave only)
+    --difficulty_cataclysm_2 = "", -- (Weave only)
 }
 
 mod:hook("Localize", function(func, key)

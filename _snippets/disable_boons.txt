@@ -1,5 +1,6 @@
 ---
-title: Disable quest boons (VT1)
+title: Disable quest boons
+vt1: true
 ---
 
 local function const(v) return function() return v end end

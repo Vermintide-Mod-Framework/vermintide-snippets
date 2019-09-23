@@ -1,8 +1,8 @@
 ---
 title: No intoxication effect
 requested_by: GhostBDH
+description: >
+  Neuters the intoxication effect in the A Quiet Drink bonus level.
 ---
 
 mod:hook_origin(BuffFunctionTemplates.functions, "update_intoxication_level", function() end)
-
-Neuters the intoxication effect in the _A Quiet Drink_ bonus level.

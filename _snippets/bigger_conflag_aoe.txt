@@ -1,5 +1,5 @@
 ---
-title: Bigger Conflagration Staff AoE
+title: Bigger conflagration staff AoE
 requested_by: Bioshift
 ---
 

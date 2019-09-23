@@ -1,8 +1,8 @@
 ---
-title: Set field-of-view
+title: Set any field of view
 requested_by: ivyoary
 ---
 
-local WANTED_FOV = 150
+local WANTED_FOV = 150 -- FOVs >= 180 don't make sense
 
 script_data.fov_override = WANTED_FOV

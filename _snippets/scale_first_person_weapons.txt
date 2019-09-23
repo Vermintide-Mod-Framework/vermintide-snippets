@@ -1,5 +1,6 @@
 ---
 title: Scale first person weapons
+author: prop joe
 ---
 
 local LEFT_HAND_WEAPON_SCALE = 0.5 -- Default: 1

@@ -1,5 +1,6 @@
 ---
-title: Give allies a buff (VT1 only)
+title: Give allies a buff
+vt1: true
 ---
 
 local buff_template = "speed_boost_potion"

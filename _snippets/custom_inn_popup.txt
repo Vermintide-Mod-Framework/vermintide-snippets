@@ -1,5 +1,5 @@
 ---
-title: Custom Inn Notification
+title: Custom inn popup
 ---
 
 local index = #NewsFeedTemplates + 1
@@ -17,7 +17,5 @@ NewsFeedTemplates[index] = {
     duration = 5,
     cooldown = -1,
     infinite = true,
-    condition_func = function (params)
-        return true -- @TODO
-    end,
+    condition_func = function(params) return true end,
 }

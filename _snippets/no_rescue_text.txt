@@ -1,5 +1,5 @@
 ---
-title: Hide the "Waiting for Rescue" text
+title: Hide the "Waiting to be rescued" text
 requested_by: ivyoary
 ---
 

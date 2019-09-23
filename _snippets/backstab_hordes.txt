@@ -1,5 +1,5 @@
 ---
-title: Enable backstab soundcue in hordes
+title: Enable backstab cue in hordes
 ---
 
 mod:hook(BTAttackAction, "enter", function(func, self, unit, blackboard, t)
