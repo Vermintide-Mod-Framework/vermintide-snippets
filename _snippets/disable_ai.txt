@@ -1,0 +1,5 @@
+---
+title: Disable enemy AI
+---
+
+mod:hook_origin(AISystem, "update_brains", function() end)
