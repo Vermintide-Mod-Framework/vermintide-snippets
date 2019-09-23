@@ -5,25 +5,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css"/>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
-  <title>Vermintide Snippets</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-lua.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+  <script defer src="app.js"></script>
+  <title>VT Snippets</title>
 </head>
 <body>
-  <h1>Vermintide Snippets</h1>
-  <input id="search-box" type="text" placeholder="Search..." autofocus>
-  <ul>
-  {% for snip in site.snippets %}
-  <li class="snippet-index">
-    <a class="open-snippet" href="{{ snip.url | relative_url }}">
-      <span class="info-group">
-        <span class="title">{{ snip.title }}</span>
-        <span class="filename">{{ snip.url }}</span>
-      </span>
-      {% if snip.requested_by %}<span class="requester">{{ snip.requested_by }}</span>{% endif %}
-    </a>
-  </li>
-  {% endfor %}
-  </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="vs-nav d-flex flex-column col-12 col-xl-4 ml-3 py-2 px-0 border-right border-left">
+        <h1 class="mx-auto">VT Snippets</h1>
+        <input id="vs-search" class="form-control my-2" type="search" placeholder="Search" aria-label="Search" autofocus>
+        <div class="list-group list-group-flush overflow-auto">
+          {% for snip in site.snippets %}
+          <a href="{{ snip.url | relative_url }}" class="vs-snippet-entry list-group-item list-group-item-action py-1">
+            <h5 class="mb-1 d-flex justify-content-between align-items-center">
+              <span class="vs-list-title">{{ snip.title }}</span>
+              {% if snip.vt1 %}<span class="badge badge-info">VT1</span>{% endif %}
+            </h5>
+            <small>
+              <span class="font-weight-lighter">Made by </span>{{ snip.author | default:'Zaphio' }}<span class="font-weight-lighter">.</span>
+              {% if snip.requested_by %}<span class="font-weight-lighter">Requested by </span>{{ snip.requested_by }}<span class="font-weight-lighter">.</span>{% endif %}
+            </small>
+          </a>
+          {% endfor %}
+        </div>
+      </nav>
+      <main class="vs-detail d-flex flex-column col-12 col-xl-8 pt-4 pl-5 pr-4 ml-n3">
+        <figure class="vs-code-container overflow-auto">
+          <nav class="navbar navbar-dark bg-secondary">
+            <span id="vs-title" class="navbar-brand mb-0 h1">no snippet selected!</span>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <button id="vs-copy" data-clipboard-target="#vs-code" class="btn btn-light text-nowrap">Copy to clipboard</button>
+                <a href="#" id="vs-download" class="btn btn-light text-nowrap">View raw</a>
+              </li>
+            </ul>
+          </nav>
+          <pre class="line-numbers mt-0"><code id="vs-code" class="language-lua">-- Select one from the index.</code></pre>
+        </figure>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
