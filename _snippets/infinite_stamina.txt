@@ -1,0 +1,6 @@
+---
+title: Infinite stamina
+requested_by: Novality
+---
+
+mod:hook_origin(GenericStatusExtension, "add_fatigue_points", function() end)
