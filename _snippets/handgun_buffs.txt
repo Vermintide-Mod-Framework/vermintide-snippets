@@ -1,0 +1,18 @@
+---
+title: Overpowered Handgun
+---
+
+local tmp = Weapons.handgun_template_1
+tmp.ammo_data.max_ammo = 2^51
+
+tmp.dodge_count = 99
+tmp.buffs.change_dodge_distance.external_optional_multiplier = 0.75
+tmp.buffs.change_dodge_speed.external_optional_multiplier = 1.5
+
+tmp.ammo_data.ammo_per_reload = 8
+tmp.ammo_data.ammo_per_clip = 8
+tmp.ammo_data.play_reload_anim_on_wield_reload = false
+
+tmp.actions.action_one.default.apply_recoil = false
+tmp.actions.action_two.default.can_abort_reload = true
+tmp.action_one.default.total_time = 0.66 * 0.2
