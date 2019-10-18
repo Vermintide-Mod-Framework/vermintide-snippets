@@ -52,7 +52,7 @@ local new_talent = {
 
 local index = 99 -- Any unused index in all talent tables will do.
 local row, col = unpack(TALENT_TO_HIJACK)
-TalentIDLookup[new_talent.name] = index
+TalentIDLookup[new_talent.name] = { talent_id = index, hero_name = nil } 
 for hero_name, all_talents in pairs(Talents) do
     all_talents[index] = new_talent
     local talent_trees = TalentTrees[hero_name]
