@@ -1,0 +1,21 @@
+---
+title: Funky headbobbing
+---
+
+local function wobble_heads(units, t)
+    for _, unit in ipairs(units) do
+        if unit and Unit.alive(unit) and Unit.has_node(unit, "j_head") then
+            local node = Unit.node(unit, "j_head")
+            local pos = Unit.local_position(unit, node)
+            local off = Vector3(0.1+0.1*math.sin(t), 0.1*math.cos(t), 0.1*math.cos(t))
+            Unit.set_local_position(unit, node, pos + off)
+        end
+    end
+end
+
+mod:hook_safe(World, "update_animations_with_callback", function()
+    local t = Managers.time:time("game")*20
+    local side_manager = Managers.state.side
+    wobble_heads(side_manager:get_side_from_name("heroes")._units, t)
+    wobble_heads(side_manager:get_side_from_name("dark_pact")._units, t)
+end)
