@@ -1,0 +1,9 @@
+---
+title: Enable the debug menu
+---
+
+script_data.debug_enabled = true
+GameSettingsDevelopment.disable_free_flight = false
+GameSettingsDevelopment.beta = false
+-- Disable this function as it crashes release builds.
+FreeFlightManager._toggle_frustum_freeze = function() end
