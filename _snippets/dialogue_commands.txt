@@ -1,0 +1,35 @@
+---
+title: Search and play dialogue
+---
+
+local lower, find, results = string.lower, string.find, {}
+
+mod:command("soundsearch", [[
+Search all subtitles for a pattern.
+Open the VMF console (from mod options) for better results viewing.]],
+function(...)
+    local needle = string.concat({...}, ".-")
+    results = {}
+    for i, event in ipairs(DialogueLookup) do
+        local caption = lower(Localize(event)
+        if find(caption, needle) then
+            mod:echo("[%i] %s: %q", i, event, caption)
+            results[#results+1] = event
+        end
+    end
+end)
+
+mod:command("soundplay", [[
+Play a sound.
+You can provide either an event name or an index into the previous search.
+IMPORTANT: The appropiate soundbank must be loaded to play the sound.
+]],
+function(event)
+    local i = tonumber(event)
+    event = i and results[i] or event
+    if not event then return mod:echo("No event name/index provided.") end
+    local world = Managers.world:world("level_world")
+    local wwise_world = Managers.world:wwise_world(world)
+    local ok = WwiseWorld.trigger_event(wwise_world, event)
+    mod:echo("Playing %q (%s)", event, ok and "OK", "ERR?")
+end)
