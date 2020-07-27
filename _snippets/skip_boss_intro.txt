@@ -1,0 +1,9 @@
+---
+title: Skip boss monologues/intros
+---
+
+local function handler(unit, blackboard, t) blackboard.intro_timer = nil end
+mod:hook_origin(BTEnterHooks, "on_chaos_exalted_champion_intro_enter", handler)
+mod:hook_origin(BTEnterHooks, "on_chaos_exalted_sorcerer_intro_enter", handler)
+mod:hook_origin(BTEnterHooks, "on_skaven_warlord_intro_enter", handler)
+mod:hook_origin(BTEnterHooks, "on_grey_seer_intro_enter", handler)
