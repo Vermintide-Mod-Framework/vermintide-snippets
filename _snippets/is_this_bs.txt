@@ -25,7 +25,7 @@ Managers.debug_updator:add_updator(function()
         local hit_angle = Vector3.dot(hit_unit_direction, owner_to_hit_dir)
         local behind_target = hit_angle >= 0.55 and hit_angle <= 1
     
-        local text = behind_target and "YES" or "No"
+        local text = behind_target and "This is BS." or "Not BS."
         local color_vector = behind_target and green or red
         local head_node = Unit.node(hit_unit, "c_head")
         Managers.state.debug_text:clear_unit_text(hit_unit, "show_backstabs")
