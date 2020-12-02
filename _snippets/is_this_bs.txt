@@ -1,0 +1,34 @@
+---
+title: Backstab Indicator
+requested_by: jsat
+---
+
+
+local Vector3, Quaternion, Unit = Vector3, Quaternion, Unit
+script_data.disable_debug_draw = false
+Managers.debug_updator:add_updator(function()
+    local ai_system = Managers.state and Managers.state.entity and Managers.state.entity:system("ai_system")
+    local player = Managers.player:local_player()
+    local player_unit = player and player.player_unit
+    if not (ai_system and ALIVE[player_unit]) then return end
+    local green = Vector3(0, 255, 0)
+    local red = Vector3(255, 0, 0)
+    local unit_world_position = Unit.world_position
+    local unit_local_rotation = Unit.local_rotation
+    local owner_unit_pos = unit_world_position(player_unit, 0)
+    for hit_unit, extension in pairs(ai_system.ai_units_alive) do
+        
+        local hit_unit_pos = unit_world_position(hit_unit, 0)
+        local owner_to_hit_dir = Vector3.normalize(hit_unit_pos - owner_unit_pos)
+
+        local hit_unit_direction = Quaternion.forward(unit_local_rotation(hit_unit, 0))
+        local hit_angle = Vector3.dot(hit_unit_direction, owner_to_hit_dir)
+        local behind_target = hit_angle >= 0.55 and hit_angle <= 1
+    
+        local text = behind_target and "YES" or "No"
+        local color_vector = behind_target and green or red
+        local head_node = Unit.node(hit_unit, "c_head")
+        Managers.state.debug_text:clear_unit_text(hit_unit, "show_backstabs")
+        Managers.state.debug_text:output_unit_text(text, 0.2, hit_unit, head_node, Vector3.up()*0.20, 0.1, "show_backstabs", color_vector, "player_1")
+    end
+end, "show_backstabs")
