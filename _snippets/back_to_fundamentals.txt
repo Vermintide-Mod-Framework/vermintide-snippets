@@ -3,7 +3,7 @@ title: Back2Fundamentals (Alpha)
 ---
 local BOSS_DAMAGE_PERCENT = 125
 local DODGE_STAMINA_REGEN_DELAY = 0.0 -- between 0 and 1
-local PROC_CHANC = {
+local PROC_CHANCE = {
   scavenger_get_ammo_on_kill = 1, --0.07,
   
   heal_permanent_proc_on_hit_melee = 0.07,
