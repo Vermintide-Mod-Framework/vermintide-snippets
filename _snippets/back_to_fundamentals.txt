@@ -261,3 +261,5 @@ end)
 mod:hook(GenericStatusExtension, "set_invisible", function (func, self, invisible, force_third_person)
     return
 end)
+
+mod:echo("b2b installed")
