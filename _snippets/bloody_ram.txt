@@ -1,0 +1,28 @@
+---
+title: Battering Ram Kruber
+---
+
+local CHARGE_DURATION = 180
+local RAM_SCALE = 0.5
+local CHARGE_SPEED = 15
+
+mod:hook_safe(CareerAbilityESKnight, "_run_ability", function(self)
+    local do_lunge = self._status_extension.do_lunge
+    do_lunge.duration = CHARGE_DURATION
+    do_lunge.allow_rotation = true
+    do_lunge.initial_speed = CHARGE_SPEED -- From.
+    do_lunge.falloff_to_speed = CHARGE_SPEED -- To.
+    do_lunge.speed_function = nil
+end)
+
+-- The ram unit is only loaded inside warcamp.
+if Managers.level_transition_handler:get_current_level_key() == "warcamp" then
+    local player_unit = Managers.player:local_player().player_unit
+    local world = Managers.world:world("level_world")
+    local ram = World.spawn_unit(world, "units/gameplay/gameplay_chaos_ram_01", Vector3.zero(), Quaternion.identity())
+    World.link_unit(world, ram, player_unit, 0)
+    Unit.set_local_scale(ram, 0, Vector3(RAM_SCALE, RAM_SCALE, RAM_SCALE))
+    Unit.set_unit_visibility(player_unit, false)
+    local first_person_ext = ScriptUnit.extension(player_unit, "first_person_system")
+    first_person_ext:show_third_person_units(false)
+end
