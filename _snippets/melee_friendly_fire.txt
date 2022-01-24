@@ -1,0 +1,35 @@
+---
+title: Melee friendly fire
+---
+
+local COPY_player_and_bot_units = {}
+local ORIG_enemy_units_lookup
+local PATCHED_enemy_units_lookup = setmetatable({}, {
+	__index = function(t, unit)
+		if COPY_player_and_bot_units[unit] then
+			COPY_player_and_bot_units[unit] = nil
+			return true
+		end
+		return ORIG_enemy_units_lookup[unit]
+	end
+})
+local function patch(enemy_units_lookup, PLAYER_AND_BOT_UNITS)
+	ORIG_enemy_units_lookup = enemy_units_lookup
+	for _, unit in pairs(PLAYER_AND_BOT_UNITS) do
+		COPY_player_and_bot_units[unit] = true
+	end
+	return PATCHED_enemy_units_lookup
+end
+
+for _, difficulty in pairs(DifficultySettings) do
+	difficulty.friendly_fire_multiplier = 2
+end
+
+mod:hook(ActionSweep, "_do_overlap", function(func, self, dt, t, unit, owner_unit, ...)
+	local side = Managers.state.side.side_by_unit[owner_unit]
+	local enemy_units_lookup = side.enemy_units_lookup
+	-- Patch, call function, restore.
+	side.enemy_units_lookup = patch(enemy_units_lookup, side.PLAYER_AND_BOT_UNITS)
+	func(self, dt, t, unit, owner_unit, ...)
+	side.enemy_units_lookup = enemy_units_lookup
+end)
