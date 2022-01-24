@@ -1,0 +1,11 @@
+---
+title: Refresh weapon templates
+---
+
+-- Making yet-another-rebalance-mod and your weapon changes are not applying on non-blacksmith weapons?
+-- Use this snippet to force them to be updated. May have other side-effects but this is intended only for modding, anyways.
+
+local backend_items = Managers.backend:get_interface("items")
+for backend_id, modified_item_template in pairs(backend_items._modified_templates) do
+    table.merge(modified_item_template, Weapons[modified_item_template.name])
+end
