@@ -1,0 +1,13 @@
+---
+title: Third-person mode
+---
+
+local CAMERA_OFFSET = { 0.25, -2, 0.25 }
+
+local player_unit = Managers.player:local_player().player_unit
+local first_person_extension = ScriptUnit.extension(player_unit, "first_person_system")
+first_person_extension:set_first_person_mode(false)
+first_person_extension:show_third_person_units(true)
+CameraSettings.first_person[1]._node.offset_position.x = CAMERA_OFFSET[1]
+CameraSettings.first_person[1]._node.offset_position.y = CAMERA_OFFSET[2]
+CameraSettings.first_person[1]._node.offset_position.z = CAMERA_OFFSET[3]
