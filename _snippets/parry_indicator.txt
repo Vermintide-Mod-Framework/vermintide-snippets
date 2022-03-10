@@ -1,0 +1,26 @@
+---
+title: Parry indicator
+requested_by: Royale w/ Cheese
+---
+
+mod:hook_safe(IngameUI, "update", function(self)
+  local player_unit = Managers.player:local_player().player_unit
+  local status_ext = ScriptUnit.extension(player_unit, "status_system")
+  if status_ext then
+    local text = "Blocking: "
+    local color
+    local timed_block = (status_ext.timed_block or 0) - Managers.time:time("game")
+    if timed_block > 0 then
+      text = text..string.format("YES (parry timer: %.1fs)", timed_block)
+      color = Color(0,255,255)
+    elseif status_ext.blocking then
+      text = text.."YES"
+      color = Color(0,255,0)
+    else
+      text = text.."NO"
+      color = Color(255,0,0)
+    end
+    local position = Vector3(800, 300, 900) --<-- Adjust this position so you can place it on your screen.
+    Gui.text(self.ui_renderer.gui, text, "materials/fonts/arial", 36, nil, position, color)
+  end
+end)
