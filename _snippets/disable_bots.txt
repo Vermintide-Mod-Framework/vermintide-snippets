@@ -1,0 +1,5 @@
+---
+title: Disable bots
+---
+
+script_data.ai_bots_disabled = true
